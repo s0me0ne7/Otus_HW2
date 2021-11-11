@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/Otus_HW2/obj
+/Otus_HW2/bin/Debug/net6.0
+/.vs/Otus_HW2
