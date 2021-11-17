@@ -1,24 +1,12 @@
 Insert into public.clients(email, first_name, last_name, second_name )
-Select 'e.vasilenko@mail.ru', 'Евгений', 'Василенко', 'Александрович'
-Union All
-Select 'a.petrov@mail.ru', 'Александр', 'Петров', 'Николаевич'
-Union All
-Select 's.trunov@mail.ru', 'Сергей', 'Трунов', 'Васильевич'
-Union All
-Select 'e.chamova@mail.ru', 'Елена', 'Чамова', 'Кирилловна'
-Union All
-Select 't.marinova@mail.ru', 'Татьяна', 'Маринова', null;
+Values ( 'e.vasilenko@mail.ru', 'Евгений', 'Василенко', 'Александрович'),
+('a.petrov@mail.ru', 'Александр', 'Петров', 'Николаевич'),
+('s.trunov@mail.ru', 'Сергей', 'Трунов', 'Васильевич'),
+('e.chamova@mail.ru', 'Елена', 'Чамова', 'Кирилловна'),
+('t.marinova@mail.ru', 'Татьяна', 'Маринова', null);
 
 Insert into public.product_type(name )
-Select 'Счет в Рублях'
-Union All
-Select 'Накопительный счет в Рублях'
-Union All
-Select 'Счет в Долларах'
-Union All
-Select 'Счет в Евро'
-Union All
-Select 'Накопительный счет в Долларах';
+Values ('Счет в Рублях'), ('Накопительный счет в Рублях'),('Счет в Долларах'), ('Счет в Евро'), ('Накопительный счет в Долларах');
 
 Insert into public.clientproducts(client_id, product_type_id)
 Select (Select id from public.clients where email = 'e.vasilenko@mail.ru'), (Select id from public.product_type where name = 'Счет в Рублях')
