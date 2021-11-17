@@ -20,7 +20,7 @@ namespace Otus_HW2
                 var conscommand = Console.ReadLine();
                 if (conscommand == "y")
                 {
-                    ClientProductsAdd();
+                    AddClientProducts();
                     Console.ReadKey();
                 }
                 Console.Clear();
@@ -66,7 +66,7 @@ namespace Otus_HW2
             }
         }
 
-        static void ClientProductsAdd()
+        static void AddClientProducts()
         {
             BaseContext db = new BaseContext();
 
