@@ -17,8 +17,8 @@ namespace Otus_HW2
                 PrintClientProducts();
 
                 Console.WriteLine("\r\nДобавить клиенту новый продукт?(Y/N)");
-                var conscommand = Console.ReadLine();
-                if (conscommand == "y")
+                var conscommand = Console.ReadKey().Key;
+                if (conscommand == ConsoleKey.Y)
                 {
                     AddClientProducts();
                     Console.ReadKey();
